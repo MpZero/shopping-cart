@@ -1,0 +1,17 @@
+.wrapper {
+  background-color: rgb(177, 180, 177);
+  padding: 1em;
+  display: grid;
+  justify-items: center;
+  border-radius: 0.25em;
+  transition: background-color, 0.4s;
+}
+
+.wrapper:hover {
+  background-color: rgb(35, 35, 35);
+  color: white;
+}
+
+.description {
+  padding: 0.6em;
+}

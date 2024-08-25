@@ -1,13 +1,22 @@
+import styles from "./Navbar.module.css";
 import { Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <>
-      <h1>Navbar!</h1>
-      <Link to="/homepage">Home</Link>
-      <Link to="/cart">Cart</Link>
-      <Outlet />
-    </>
+    <div className={styles.wrapper}>
+      <div className={styles.navbar}>
+        <img src="https://placehold.co/100x30" alt="logo" />
+        <Link className={styles.link} to="/homepage">
+          Home
+        </Link>
+        <Link className={styles.link} to="/cart">
+          Cart
+        </Link>
+      </div>
+      <div className={styles.outletWrapper}>
+        <Outlet />
+      </div>
+    </div>
   );
 };
 

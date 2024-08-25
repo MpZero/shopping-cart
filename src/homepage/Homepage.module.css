@@ -1,0 +1,65 @@
+/* header */
+
+.wrapper {
+  display: grid;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(9, 8, 24);
+}
+
+.title {
+  color: white;
+  padding-block: 0.4em;
+}
+
+.navBar {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+h3 {
+  color: white;
+  background-color: rgb(125, 125, 125);
+  cursor: pointer;
+  transition: all, 0.4s;
+  padding: 0.3em;
+}
+
+h3:hover {
+  background-color: rgb(49, 49, 49);
+}
+
+.searchWrapper {
+  display: flex;
+  justify-content: end;
+}
+input {
+  padding: 0.4em;
+  width: 100%;
+}
+
+svg {
+  z-index: 10;
+  background-color: #fff;
+  width: 2.6em;
+  height: 2.6em;
+  position: absolute;
+  /* transform: translate(-0.6em, -0.1em); */
+  cursor: pointer;
+  border: 1px solid rgb(121, 119, 119);
+  padding-inline: 12px;
+  /* transform: translate(250px, 0.4em); */
+}
+/* header end */
+
+/* main */
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  padding: 2em;
+  background-color: rgb(226, 229, 226);
+  gap: 1em;
+}

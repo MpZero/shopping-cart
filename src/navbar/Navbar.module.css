@@ -1,0 +1,29 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.navbar {
+  background-color: rgb(102, 94, 94);
+  border: 1px solid rgb(115, 114, 114);
+  padding: 1em;
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  border: 1px solid rgb(78, 78, 78);
+  border-radius: 0.25em;
+  text-decoration: none;
+  background-color: #ebe7e7;
+  color: black;
+  text-align: center;
+  padding: 0.4em;
+  transition: backgroud-color, 0.4s;
+}
+
+.link:hover {
+  background-color: #55565c;
+  color: white;
+}

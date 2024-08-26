@@ -3,32 +3,35 @@
 .wrapper {
   display: grid;
   text-align: center;
+  color: var(--text);
 }
 
 header {
-  background-color: rgb(9, 8, 24);
+  background-color: var(--secondary);
 }
 
 .title {
-  color: white;
   padding-block: 0.4em;
+  font-size: var(--medium);
 }
 
 .navBar {
   display: grid;
   grid-auto-flow: column;
+  font-size: var(--small);
 }
 
 h3 {
-  color: white;
-  background-color: rgb(125, 125, 125);
+  background-color: var(--primary);
+  color: var(--text);
   cursor: pointer;
   transition: all, 0.4s;
   padding: 0.3em;
 }
 
 h3:hover {
-  background-color: rgb(49, 49, 49);
+  background-color: var(--accent);
+  color: var(--text-hover);
 }
 
 .searchWrapper {
@@ -38,20 +41,24 @@ h3:hover {
 input {
   padding: 0.4em;
   width: 100%;
+  border: none;
+  transition: all, 0.4s;
 }
 
 svg {
-  z-index: 10;
   background-color: #fff;
-  width: 2.6em;
-  height: 2.6em;
-  position: absolute;
-  /* transform: translate(-0.6em, -0.1em); */
   cursor: pointer;
-  border: 1px solid rgb(121, 119, 119);
-  padding-inline: 12px;
-  /* transform: translate(250px, 0.4em); */
+  width: 2.9em;
+  border-left: 1px solid gray;
+  padding: 10px;
+  transition: all, 0.4s;
 }
+
+input:hover,
+svg:hover {
+  background-color: rgb(217, 215, 215);
+}
+
 /* header end */
 
 /* main */
@@ -59,7 +66,7 @@ svg {
 main {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  padding: 2em;
-  background-color: rgb(226, 229, 226);
   gap: 1em;
+  padding: 2em;
+  background-color: var(--background);
 }

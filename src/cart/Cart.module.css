@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 4em;
+  background-color: var(--background);
+}
+
+.cartWrapper {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  background-color: var(--accent);
+  box-shadow: var(--shadow);
+  border-radius: 0.25em;
+}
+
+.itemWrapper {
+  padding: 1em;
+  display: grid;
+  gap: 0.2em;
+}
+
+.heading {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+}
+
+.summaryWrapper {
+  padding: 1em;
+  background-color: #6c6c6c;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 1em;
+}
+
+.shipping {
+  padding-block: 1em;
+}
+.discount {
+  padding-block: 1em;
+}

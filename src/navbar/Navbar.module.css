@@ -4,26 +4,27 @@
 }
 
 .navbar {
-  background-color: rgb(102, 94, 94);
-  border: 1px solid rgb(115, 114, 114);
+  background-color: var(--secondary);
+  border-right: 1px solid rgb(65, 64, 101);
   padding: 1em;
   gap: 1em;
   display: flex;
   flex-direction: column;
+  font-size: var(--small);
 }
 
 .link {
-  border: 1px solid rgb(78, 78, 78);
+  /* border: 1px solid rgb(78, 78, 78); */
   border-radius: 0.25em;
   text-decoration: none;
-  background-color: #ebe7e7;
-  color: black;
+  background-color: var(--primary);
+  color: var(--text);
   text-align: center;
   padding: 0.4em;
-  transition: backgroud-color, 0.4s;
+  transition: all, 0.4s;
 }
 
 .link:hover {
-  background-color: #55565c;
-  color: white;
+  background-color: var(--accent);
+  color: var(--text-hover);
 }

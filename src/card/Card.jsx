@@ -1,7 +1,9 @@
 import styles from "./Card.module.css";
+import "../colors.module.css";
 
 const Card = () => {
   return (
+    // <div className={styles.wrapper}>
     <div className={styles.wrapper}>
       <h4>ITEM</h4>
       <img src="https://placehold.co/300x300" alt="" />

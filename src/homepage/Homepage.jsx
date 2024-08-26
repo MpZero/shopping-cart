@@ -1,4 +1,6 @@
 import styles from "./Homepage.module.css";
+import "../colors.module.css";
+
 import Card from "../card/Card.jsx";
 
 const Homepage = () => {

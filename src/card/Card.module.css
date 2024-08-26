@@ -1,15 +1,26 @@
 .wrapper {
-  background-color: rgb(177, 180, 177);
+  background-color: var(--primary);
+  color: var(--text);
   padding: 1em;
   display: grid;
   justify-items: center;
   border-radius: 0.25em;
-  transition: background-color, 0.4s;
+  transition: all, 0.4s;
+  text-align: start;
+  box-shadow: var(--shadow);
+  font-size: var(--small);
 }
 
 .wrapper:hover {
-  background-color: rgb(35, 35, 35);
-  color: white;
+  background-color: var(--accent);
+  color: var(--text-hover);
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+img {
+  border: 1px solid rgb(162, 161, 161);
+  border-radius: 0.25em;
 }
 
 .description {

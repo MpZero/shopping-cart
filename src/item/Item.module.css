@@ -1,0 +1,11 @@
+.item {
+  display: grid;
+  padding: 0.2em;
+  border-bottom: 1px solid rgb(173, 171, 171);
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+}
+
+p {
+  font-size: var(--small);
+}

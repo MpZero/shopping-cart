@@ -1,20 +1,22 @@
 .wrapper {
   padding: 4em;
   background-color: var(--background);
+  height: 100vh;
 }
 
 .cartWrapper {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  background-color: var(--accent);
   box-shadow: var(--shadow);
   border-radius: 0.25em;
+  overflow: hidden;
 }
 
 .itemWrapper {
   padding: 1em;
   display: grid;
   gap: 0.2em;
+  background-color: var(--accent);
 }
 
 .heading {
@@ -25,18 +27,48 @@
 
 .summaryWrapper {
   padding: 1em;
-  background-color: #6c6c6c;
-}
-
-.total {
-  display: flex;
-  justify-content: space-between;
-  padding-block: 1em;
+  background-color: #c1c1c1;
 }
 
 .shipping {
   padding-block: 1em;
+  display: grid;
+  gap: 0.2em;
 }
+
 .discount {
   padding-block: 1em;
+  display: grid;
+  gap: 0.2em;
+}
+.discount > input {
+  border: none;
+  border-radius: 0.25em;
+  transition: all, 0.4s;
+}
+
+.discount > input:hover {
+  background-color: rgb(226, 226, 226);
+  box-shadow: var(--shadow);
+}
+.total {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding-block: 1em;
+  gap: 0.2em;
+}
+
+.checkout {
+  grid-column: span 2;
+  transition: all, 0.4s;
+  border: 2px solid rgb(169, 167, 167);
+  border-radius: 0.25em;
+  transition: all, 0.4s;
+}
+
+.checkout:hover {
+  background-color: black;
+  color: var(--accent);
+  box-shadow: var(--shadow);
 }

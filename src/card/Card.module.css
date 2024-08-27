@@ -3,12 +3,14 @@
   color: var(--text);
   padding: 1em;
   display: grid;
-  justify-items: center;
+  justify-items: start;
   border-radius: 0.25em;
   transition: all, 0.4s;
   text-align: start;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-s);
   font-size: var(--small);
+  gap: 0.4em;
+  min-width: 200px;
 }
 
 .wrapper:hover {
@@ -25,4 +27,34 @@ img {
 
 .description {
   padding: 0.6em;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.buttons,
+.addToCartBtn {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid rgb(169, 167, 167);
+  min-width: 25px;
+  transition:
+    color 0.4s,
+    background-color 0.2s;
+}
+
+.buttons:hover,
+.addToCartBtn:hover {
+  background-color: rgb(0, 0, 0);
+  color: var(--text);
+  box-shadow: var(--shadow-s);
+}
+
+.addToCartBtn {
+  border-radius: 0.25em;
+  margin-right: 0.8em;
 }

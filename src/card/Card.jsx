@@ -7,8 +7,13 @@ const Card = () => {
     <div className={styles.wrapper}>
       <h4>ITEM</h4>
       <img src="https://placehold.co/300x300" alt="" />
-      <div className={styles.description}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <p>$ 300</p>
+      Lorem ipsum dolor sit amet
+      <div className={styles.buttonWrapper}>
+        <button className={styles.addToCartBtn}>Add to Cart</button>
+        <button className={styles.buttons}>+</button>
+        <p>#</p>
+        <button className={styles.buttons}>-</button>
       </div>
     </div>
   );

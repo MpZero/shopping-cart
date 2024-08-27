@@ -21,7 +21,7 @@ header {
   font-size: var(--small);
 }
 
-h3 {
+.navBar > h3 {
   background-color: var(--primary);
   color: var(--text);
   cursor: pointer;
@@ -29,7 +29,7 @@ h3 {
   padding: 0.3em;
 }
 
-h3:hover {
+.navBar > h3:hover {
   background-color: var(--accent);
   color: var(--text-hover);
 }
@@ -38,7 +38,7 @@ h3:hover {
   display: flex;
   justify-content: end;
 }
-input {
+.searchWrapper > input {
   padding: 0.4em;
   width: 100%;
   border: none;

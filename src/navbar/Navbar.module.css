@@ -11,10 +11,10 @@
   display: flex;
   flex-direction: column;
   font-size: var(--small);
+  min-width: 200px;
 }
 
 .link {
-  /* border: 1px solid rgb(78, 78, 78); */
   border-radius: 0.25em;
   text-decoration: none;
   background-color: var(--primary);

@@ -1,6 +1,6 @@
 import "../colors.module.css";
 import styles from "./Cart.module.css";
-import Item from "../item/Item";
+import Item from "../item/Item.jsx";
 const Cart = () => {
   return (
     <div className={styles.wrapper}>
@@ -35,6 +35,11 @@ const Cart = () => {
               id="discount"
               placeholder="Enter your code"
             />
+          </div>
+          <div className={styles.total}>
+            <p>TOTAL PRICE</p>
+            <p>$ 900</p>
+            <button className={styles.checkout}>CHECKOUT</button>
           </div>
         </div>
       </div>

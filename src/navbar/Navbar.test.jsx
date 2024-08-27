@@ -29,9 +29,10 @@ describe("Render Navbar correctly", () => {
       </MemoryRouter>
     );
 
+    screen.debug();
     //Check Navbar first
-    const home = screen.getByText(/home/i);
-    const cart = screen.getByText(/cart/i);
+    const home = screen.getByRole("link", { name: /home/i });
+    const cart = screen.getByRole("link", { name: /cart/i });
 
     expect(home).toBeInTheDocument();
     expect(cart).toBeInTheDocument();
@@ -39,6 +40,5 @@ describe("Render Navbar correctly", () => {
     //Check Homepage
     const title = screen.getByText("Stylism");
     expect(title).toBeInTheDocument();
-    screen.debug();
   });
 });

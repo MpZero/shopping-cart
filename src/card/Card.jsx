@@ -1,13 +1,23 @@
 import styles from "./Card.module.css";
 import "../colors.module.css";
 
-const Card = () => {
+// eslint-disable-next-line react/prop-types
+const Card = ({ imageURL, title, price }) => {
   return (
-    // <div className={styles.wrapper}>
     <div className={styles.wrapper}>
-      <h4>ITEM</h4>
-      <img src="https://placehold.co/300x300" alt="" />
-      <p>$ 300</p>
+      <h4 className={styles.h4}>{title}</h4>
+      <div className={styles.imgWrapper}>
+        {imageURL ? (
+          <img className={styles.img} src={imageURL} alt="Product" />
+        ) : (
+          <img
+            className={styles.img}
+            src="https://placehold.com/150x150"
+            alt="Image not available"
+          />
+        )}
+      </div>
+      <p className={styles.p}>$ {price}</p>
       Lorem ipsum dolor sit amet
       <div className={styles.buttonWrapper}>
         <button className={styles.addToCartBtn}>Add to Cart</button>

@@ -1,9 +1,41 @@
 import styles from "./Homepage.module.css";
 import "../colors.module.css";
-
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Card from "../card/Card.jsx";
 
 const Homepage = () => {
+  const location = useLocation();
+  const { data: passedData } = location.state || {};
+  const [products, setProducts] = useState(passedData || null);
+  const [loading, setLoading] = useState(!passedData);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    //If Navbar doesn't pass data, fetch it
+    if (!passedData) {
+      fetch("https://fakestoreapi.com/products?limit=8", { mode: "cors" })
+        .then((response) => {
+          if (response.status >= 400) {
+            throw new Error("server error");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          if (Array.isArray(data)) {
+            setProducts(data);
+          } else {
+            throw new Error("Unexpected data format");
+          }
+        })
+        .catch((error) => setError(error))
+        .finally(() => setLoading(false));
+    }
+  }, [passedData]);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
   return (
     <div className={styles.wrapper}>
       <header>
@@ -26,14 +58,18 @@ const Homepage = () => {
         </div>
       </header>
       <main>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {Array.isArray(products) && products.length > 0 ? (
+          products.map((product) => (
+            <Card
+              key={product.id}
+              imageURL={product.image}
+              title={product.title}
+              price={product.price}
+            />
+          ))
+        ) : (
+          <p>No products available</p>
+        )}
       </main>
     </div>
   );

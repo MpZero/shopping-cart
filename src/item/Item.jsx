@@ -2,21 +2,19 @@ import "../colors.module.css";
 
 import styles from "./Item.module.css";
 
-// const Item = ({ name, price, image }) => {
-const Item = () => {
+// eslint-disable-next-line react/prop-types
+const Item = ({ name, price, image }) => {
   return (
     <div className={styles.wrapper}>
-      <img
-        src="https://placehold.co/100x100"
-        alt={name}
-        className={styles.image}
-      />
-      <p>PLACEHOLDER</p>
+      <div className={styles.imgWrapper}>
+        <img src={image} alt={name} className={styles.img} />
+      </div>
+      <p>{name}</p>
       <div className={styles.buttonWrapper}>
         <button className={styles.buttons}>+</button>
         <p>#</p>
         <button className={styles.buttons}>-</button>
-        <p className={styles.itemPrice}>$ 300</p>
+        <p className={styles.itemPrice}>$ {price}</p>
       </div>
     </div>
   );

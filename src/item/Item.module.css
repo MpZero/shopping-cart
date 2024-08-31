@@ -4,13 +4,15 @@
   border-bottom: 1px solid rgb(173, 171, 171);
   gap: 0.5em;
   align-items: center;
+
   grid-auto-flow: column;
-}
-.image {
-  min-width: 100px;
 }
 p {
   font-size: var(--small);
+}
+.imgWrapper {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 .buttonWrapper {

@@ -1,24 +1,36 @@
 import "../colors.module.css";
 import styles from "./Cart.module.css";
 import Item from "../item/Item.jsx";
+import { useCart } from "./CartContext.jsx";
+
 const Cart = () => {
+  const { cartItems } = useCart();
+  const priceTotal = cartItems.reduce(
+    (total, item) => total + (item.price || 0),
+    0
+  );
   return (
     <div className={styles.wrapper}>
       <div className={styles.cartWrapper}>
         <div className={styles.itemWrapper}>
           <div className={styles.heading}>
             <h2>Shopping Cart</h2>
-            <p># items</p>
+            <p>{cartItems.length} items</p>
           </div>
-          <Item />
-          <Item />
-          <Item />
+          {cartItems.map((item) => (
+            <Item
+              key={item.id}
+              image={item.image}
+              name={item.name}
+              price={item.price}
+            />
+          ))}
         </div>
         <div className={styles.summaryWrapper}>
           <h2>Summary</h2>
           <div className={styles.total}>
-            <p>TOTAL ITEMS: 3</p>
-            <p>$ 900</p>
+            <p>TOTAL ITEMS: {cartItems.length}</p>
+            <p>${Math.floor(priceTotal)}</p>
           </div>
           <div className={styles.shipping}>
             <label htmlFor="shipping">SHIPPING</label>
@@ -38,7 +50,7 @@ const Cart = () => {
           </div>
           <div className={styles.total}>
             <p>TOTAL PRICE</p>
-            <p>$ 900</p>
+            <p>${Math.floor(priceTotal)}</p>
             <button className={styles.checkout}>CHECKOUT</button>
           </div>
         </div>

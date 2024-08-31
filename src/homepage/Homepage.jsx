@@ -3,6 +3,7 @@ import "../colors.module.css";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Card from "../card/Card.jsx";
+import { useCart } from "../cart/CartContext.jsx";
 
 const Homepage = () => {
   const location = useLocation();
@@ -10,6 +11,7 @@ const Homepage = () => {
   const [products, setProducts] = useState(passedData || null);
   const [loading, setLoading] = useState(!passedData);
   const [error, setError] = useState(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     //If Navbar doesn't pass data, fetch it
@@ -35,7 +37,6 @@ const Homepage = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
-
   return (
     <div className={styles.wrapper}>
       <header>
@@ -65,6 +66,7 @@ const Homepage = () => {
               imageURL={product.image}
               title={product.title}
               price={product.price}
+              onAddToCart={() => addToCart(product)}
             />
           ))
         ) : (

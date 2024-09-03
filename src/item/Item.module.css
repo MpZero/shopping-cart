@@ -1,18 +1,25 @@
 .wrapper {
   display: grid;
-  padding: 0.2em;
+  padding: 0.4em;
   border-bottom: 1px solid rgb(173, 171, 171);
   gap: 0.5em;
   align-items: center;
-
   grid-auto-flow: column;
+  grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
 }
 p {
   font-size: var(--small);
 }
 .imgWrapper {
+  padding: 1em;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(162, 161, 161);
+  border-radius: 0.25em;
   max-width: 100px;
-  max-height: 100px;
+}
+
+.name {
+  font-size: small;
 }
 
 .buttonWrapper {
@@ -28,8 +35,8 @@ p {
   border-radius: 50%;
   width: 25px;
   transition:
-    background-color 0.4s,
-    color 0.4s;
+    background-color 0.2s,
+    color 0.2s;
   border: 1px solid rgb(27, 27, 27);
 }
 

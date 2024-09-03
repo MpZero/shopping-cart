@@ -5,6 +5,7 @@ import { useCart } from "./CartContext.jsx";
 
 const Cart = () => {
   const { cartItems } = useCart();
+  console.log(cartItems);
   const priceTotal = cartItems.reduce(
     (total, item) => total + (item.price || 0),
     0
@@ -21,7 +22,7 @@ const Cart = () => {
             <Item
               key={item.id}
               image={item.image}
-              name={item.name}
+              name={item.title}
               price={item.price}
             />
           ))}

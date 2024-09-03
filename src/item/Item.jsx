@@ -9,13 +9,13 @@ const Item = ({ name, price, image }) => {
       <div className={styles.imgWrapper}>
         <img src={image} alt={name} className={styles.img} />
       </div>
-      <p>{name}</p>
+      <p className={styles.name}>{name}</p>
       <div className={styles.buttonWrapper}>
         <button className={styles.buttons}>+</button>
         <p>#</p>
         <button className={styles.buttons}>-</button>
-        <p className={styles.itemPrice}>$ {price}</p>
       </div>
+      <p className={styles.itemPrice}>$ {price}</p>
     </div>
   );
 };

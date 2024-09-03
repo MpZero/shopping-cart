@@ -1,7 +1,6 @@
 .wrapper {
   padding: 4em;
   background-color: var(--background);
-  height: 100vh;
 }
 
 .cartWrapper {

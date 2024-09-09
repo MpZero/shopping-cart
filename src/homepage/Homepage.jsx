@@ -62,10 +62,12 @@ const Homepage = () => {
         {Array.isArray(products) && products.length > 0 ? (
           products.map((product) => (
             <Card
+              id={product.id}
               key={product.id}
               imageURL={product.image}
               title={product.title}
               price={product.price}
+              quantity={product.quantity}
               onAddToCart={() => addToCart(product)}
             />
           ))

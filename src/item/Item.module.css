@@ -1,51 +1,59 @@
 .wrapper {
   display: grid;
   padding: 0.4em;
-  border-bottom: 1px solid rgb(173, 171, 171);
-  gap: 0.5em;
+  border-bottom: var(--border);
   align-items: center;
   grid-auto-flow: column;
-  grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
-}
-p {
+  grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+  gap: 1em;
   font-size: var(--small);
 }
+
 .imgWrapper {
   padding: 1em;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(162, 161, 161);
+  background-color: #fff;
+  border: var(--border);
   border-radius: 0.25em;
-  max-width: 100px;
-}
-
-.name {
-  font-size: small;
+  max-width: 180px;
+  min-width: 140px;
 }
 
 .buttonWrapper {
   display: flex;
   align-items: center;
-  gap: 0.3em;
+  gap: 0.6em;
 }
 .buttons {
-  background-color: rgb(0, 0, 0);
-  color: var(--text);
-  border: none;
   cursor: pointer;
   border-radius: 50%;
   width: 25px;
   transition:
     background-color 0.2s,
     color 0.2s;
-  border: 1px solid rgb(27, 27, 27);
-}
-
-.buttons:hover {
-  background-color: #bbb9b9;
-  color: black;
-  box-shadow: var(--shadow-s);
+  border: var(--border);
+  background-color: var(--accent);
+  color: var(--text-hover);
 }
 
 .itemPrice {
-  min-width: 40px;
+  min-width: 60px;
+}
+
+.removeBtn {
+  border: var(--border);
+  border-radius: 0.25em;
+  transition:
+    background-color 0.2s,
+    color 0.4s;
+  padding: 0.4em;
+  width: 6em;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: var(--text-hover);
+}
+
+.buttons:hover,
+.removeBtn:hover {
+  background-color: var(--primary);
+  color: var(--text);
 }

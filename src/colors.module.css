@@ -1,13 +1,16 @@
 :root {
-  --text: #fefae0ff;
-  --text-hover: #0e1108;
-  --background: #0d1b2a;
-  --primary: #415a77;
-  --secondary: #1b263b;
-  --accent: #e0e1dd;
   --small: 0.9em;
   --medium: 1.4em;
   --large: 1.8em;
   --shadow: 1px 3px 8px 0px #211f1f;
   --shadow-s: 1px 1px 5px 0px #211f1f;
+  --text: #ffffff;
+  --text-hover: #0e1108;
+  --background: #0f0f0f;
+  --background-clear: #f1f1f1;
+  --primary: #272727;
+  --secondary: #3f3f3f;
+  --primary-hover: #f1f1f1;
+  --border: 1px solid rgb(169, 167, 167);
+  --body-background: #272727;
 }

@@ -6,27 +6,29 @@
 .cartWrapper {
   display: grid;
   grid-template-columns: 3fr 2fr;
-  box-shadow: var(--shadow);
   border-radius: 0.25em;
   overflow: hidden;
+  min-height: 600px;
 }
 
 .itemWrapper {
   padding: 1em;
-  display: grid;
-  gap: 0.2em;
-  background-color: var(--accent);
+
+  background-color: var(--background-clear);
 }
 
 .heading {
+  padding: 1em;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-auto-flow: column;
+  justify-content: space-between;
   align-items: center;
 }
 
 .summaryWrapper {
   padding: 1em;
-  background-color: #c1c1c1;
+  background-color: var(--secondary);
+  color: var(--text);
 }
 
 .shipping {
@@ -47,7 +49,6 @@
 }
 
 .discount > input:hover {
-  background-color: rgb(226, 226, 226);
   box-shadow: var(--shadow);
 }
 .total {
@@ -69,5 +70,5 @@
 .checkout:hover {
   background-color: black;
   color: var(--accent);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-s);
 }

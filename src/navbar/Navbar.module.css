@@ -5,7 +5,7 @@
 
 .navbar {
   background-color: var(--secondary);
-  border-right: 1px solid rgb(65, 64, 101);
+  border-right: var(--border);
   padding: 1em;
   gap: 1em;
   display: flex;
@@ -25,6 +25,10 @@
 }
 
 .link:hover {
-  background-color: var(--accent);
+  background-color: var(--primary-hover);
   color: var(--text-hover);
+}
+
+html {
+  background-color: rgb(0, 0, 0);
 }

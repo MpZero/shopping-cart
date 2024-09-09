@@ -4,10 +4,16 @@ import Item from "../item/Item.jsx";
 import { useCart } from "./CartContext.jsx";
 
 const Cart = () => {
-  const { cartItems } = useCart();
-  console.log(cartItems);
+  const { cartItems, removeFromCart, increaseQuantity, decreaseQuantity } =
+    useCart();
+
   const priceTotal = cartItems.reduce(
-    (total, item) => total + (item.price || 0),
+    (total, item) => total + (item.price * item.quantity || 0),
+    0
+  );
+
+  const totalItems = cartItems.reduce(
+    (total, item) => total + (item.quantity || 0),
     0
   );
   return (
@@ -16,7 +22,7 @@ const Cart = () => {
         <div className={styles.itemWrapper}>
           <div className={styles.heading}>
             <h2>Shopping Cart</h2>
-            <p>{cartItems.length} items</p>
+            <h2>{totalItems} items</h2>
           </div>
           {cartItems.map((item) => (
             <Item
@@ -24,14 +30,18 @@ const Cart = () => {
               image={item.image}
               name={item.title}
               price={item.price}
+              quantity={item.quantity}
+              onRemove={() => removeFromCart(item.id)}
+              onIncQuantity={() => increaseQuantity(item.id)}
+              onDecQuantity={() => decreaseQuantity(item.id)}
             />
           ))}
         </div>
         <div className={styles.summaryWrapper}>
           <h2>Summary</h2>
           <div className={styles.total}>
-            <p>TOTAL ITEMS: {cartItems.length}</p>
-            <p>${Math.floor(priceTotal)}</p>
+            <p>TOTAL ITEMS: {totalItems}</p>
+            <h3>${Math.floor(priceTotal)}</h3>
           </div>
           <div className={styles.shipping}>
             <label htmlFor="shipping">SHIPPING</label>
@@ -51,7 +61,7 @@ const Cart = () => {
           </div>
           <div className={styles.total}>
             <p>TOTAL PRICE</p>
-            <p>${Math.floor(priceTotal)}</p>
+            <h3>${Math.floor(priceTotal)}</h3>
             <button className={styles.checkout}>CHECKOUT</button>
           </div>
         </div>

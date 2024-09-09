@@ -7,7 +7,7 @@
 }
 
 header {
-  background-color: var(--secondary);
+  background-color: var(--background);
 }
 
 .title {
@@ -30,7 +30,7 @@ header {
 }
 
 .navBar > h3:hover {
-  background-color: var(--accent);
+  background-color: var(--primary-hover);
   color: var(--text-hover);
 }
 

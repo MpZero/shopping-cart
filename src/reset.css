@@ -1,4 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Geologica:wght@100..900&family=Noto+Sans+Mono:wght@100..900&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital@0;1&display=swap");
+
+:root {
+  --small: 0.9em;
+  --medium: 1.4em;
+  --large: 1.8em;
+  --shadow: 1px 3px 8px 0px #211f1f;
+  --shadow-s: 1px 1px 5px 0px #211f1f;
+  --text: #ffffff;
+  --text-hover: #0e1108;
+  --background: #0f0f0f;
+  --background-clear: #f1f1f1;
+  --primary: #272727;
+  --secondary: #3f3f3f;
+  --primary-hover: #f1f1f1;
+  --border: 1px solid rgb(169, 167, 167);
+  --body-background: #272727;
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/

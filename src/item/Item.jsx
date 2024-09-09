@@ -3,7 +3,6 @@ import "../colors.module.css";
 import styles from "./Item.module.css";
 import { useCart } from "../cart/CartContext";
 
-// eslint-disable-next-line react/prop-types
 /* eslint-disable */
 const Item = ({
   id,
